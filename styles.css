@@ -11,7 +11,7 @@ Table of Contents:
     4. Areas
         4.1 Header-navigatie
         4.2 Header
-        etc.
+        4.3 Main
     5. Media Queries
 ////////////////////////////////////////////////////////////////////////*/
 
@@ -38,57 +38,41 @@ Table of Contents:
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-h1 {
-    font-family: 'Merriweather', serif;
-}
 
 /*////////////////////////
     2. Typography
 ////////////////////////*/
-h1 {
-    color: white;
-    width: 600px;
-
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
 }
 
+h1, h2 {
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+    width: 700px;
+}
+
+h2 {
+    color: var(--Paars);
+    font-size: 25px;
+    width: 700px;
+}
 
 /*////////////////////////
     3. Layout
 ////////////////////////*/
-.input-button {
-    border-radius: 30px;
-    border: none;
-    background-color:var(--Roze);
-    color: white;
-    font-size: 12px;
-    padding: 19px;
-    width: 210px;
-    box-shadow: 0px 4px 6px 3px rgba(0,0,0,0.19);
-}
 
-.header-icoontjes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-img {
-    position: absolute;
-    bottom: -20px; /* Pas deze waarde aan om de afbeelding precies op de rand te plaatsen */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 65px;
-}
 
 /*////////////////////////
     4. areas
 ////////////////////////*/
-/*4.1 Header-navigatie*/
 
+/*--------4.1 Header-navigatie-----------------*/
 .navbar {
     display: flex;
     justify-content: flex-end;
@@ -121,11 +105,11 @@ img {
     border-radius: 4px;
 }
 
-/*4.2 Header*/
+/*--------------4.2 Header------------*/
 
 header {
-    background: linear-gradient(to right, var(--Blauw), var(--Paars));
     position: relative;
+    background: linear-gradient(to right, var(--Blauw), var(--Paars));
     overflow: hidden;
 }
 
@@ -136,14 +120,56 @@ header {
     text-align: center;
     height: 300px;
     margin-top: 80px;
-    margin-bottom: 130px;
+    margin-bottom: 125px;
 }
 
-.pheader {
+.p-header {
     color: white;
     margin-top: 25px;
     margin-bottom: 30px;
     letter-spacing: 1px;
+}
+
+.input-button-header {
+    border-radius: 30px;
+    border: none;
+    background-color:var(--Roze);
+    color: white;
+    font-size: 12px;
+    padding: 19px;
+    width: 210px;
+    box-shadow: 0px 4px 6px 3px rgba(0,0,0,0.19);
+}
+
+.header-icoontjes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-header {
+    position: absolute;
+    bottom: -25px; /* Pas deze waarde aan om de afbeelding precies op de rand te plaatsen */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65px;
+}
+
+/*-----------------4.3 Main--------------------------*/
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    margin-top: 80px;
+    margin-bottom: 125px;
+}
+
+.question-link {
+    margin-top: 80px;
+    font-size: 16px;
 }
 
 /*////////////////////////
@@ -155,10 +181,6 @@ header {
     html {
         font-size: 18px;
     }
-
-    h1 {
-        width: 750px;
-    }
 }
 
 
@@ -166,9 +188,5 @@ header {
     /* voor desktops en groter */
     html {
         font-size: 20px;
-    }
-
-    h1 {
-        width: 800px;
     }
 }
