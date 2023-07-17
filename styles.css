@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+
 
 /*////////////////////////////////////////////////////////////////////////
 Table of Contents:
@@ -8,8 +9,8 @@ Table of Contents:
         3.1 Reusables
         3.2 Other
     4. Areas
-        4.1 Header
-        4.2 Introduction
+        4.1 Header-navigatie
+        4.2 Header
         etc.
     5. Media Queries
 ////////////////////////////////////////////////////////////////////////*/
@@ -19,11 +20,16 @@ Table of Contents:
 ////////////////////////*/
 
 :root {
-    --lightorange: #f9c48b;
-    --middleorange: #f69051;
-    --red: #f26d40;
-    --black: #260803;
-    --lightpink: #fdefec
+    --Paars: #5722CD;
+    --Blauw: #4845E4;
+    --Roze: #ED4385;
+    --Zwart: #0C0C0C;
+    --Lichtpaars: #F2F0FF;
+    /*(voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:*/
+    --Lichtgrijs: #F3F6F9;
+    /*voor de ACHTERGROND*/
+    --Grijs: #7A7A7A;
+    /*voor de servicetegel tekst*/
 }
 
 * {
@@ -32,61 +38,129 @@ Table of Contents:
     box-sizing: border-box;
 }
 
-html {
-    font-size: 16px;
-}
-
 body {
-    font-family: 'Dosis', sans-serif;
-    font-weight: 400;
-    color: var(--black);
-    background-color: var(--lightorange);
+    font-family: 'Roboto', sans-serif;
 }
 
-img {
-    width: 100%;
+h1 {
+    font-family: 'Merriweather', serif;
 }
 
 /*////////////////////////
     2. Typography
 ////////////////////////*/
-h2 {
-    margin: 0 0 .5rem 0;
-}
+h1 {
+    color: white;
+    width: 600px;
 
-p {
-    margin: .75rem 0;
 }
 
 
 /*////////////////////////
     3. Layout
 ////////////////////////*/
-section {
-    background-color: var(--lightpink);
-    box-shadow: 0 .0625rem .25rem rgba(0, 0, 0, 0.16);
-    padding: 2rem;
-    margin: 1.5rem;
-    border-radius: .5rem;
+.input-button {
+    border-radius: 30px;
+    border: none;
+    background-color:var(--Roze);
+    color: white;
+    font-size: 12px;
+    padding: 19px;
+    width: 210px;
+    box-shadow: 0px 4px 6px 3px rgba(0,0,0,0.19);
+}
+
+.header-icoontjes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    position: absolute;
+    bottom: -20px; /* Pas deze waarde aan om de afbeelding precies op de rand te plaatsen */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65px;
 }
 
 /*////////////////////////
     4. areas
 ////////////////////////*/
+/*4.1 Header-navigatie*/
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    display: inline-block;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-right: 30px;
+    font-size: 16px;
+}
+.menu li:first-child {
+    margin-left: 0;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.menu li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/*4.2 Header*/
+
+header {
+    background: linear-gradient(to right, var(--Blauw), var(--Paars));
+    position: relative;
+    overflow: hidden;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    margin-top: 80px;
+    margin-bottom: 130px;
+}
+
+.pheader {
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
 
 /*////////////////////////
     5. Media Queries
 ////////////////////////*/
+
 @media screen and (min-width: 768px) {
     /* voor tablets */
     html {
         font-size: 18px;
     }
 
-    body {
-        background-color: var(--middleorange);
+    h1 {
+        width: 750px;
     }
 }
+
 
 @media screen and (min-width: 1200px) {
     /* voor desktops en groter */
@@ -94,7 +168,7 @@ section {
         font-size: 20px;
     }
 
-    body {
-        background-color: var(--red);
+    h1 {
+        width: 800px;
     }
 }
