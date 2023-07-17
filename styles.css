@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&display=swap');
+
+/*////////////////////////////////////////////////////////////////////////
+Table of Contents:
+    1. Global Styles
+    2. Typografie
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////
+    1. Global Styles
+////////////////////////*/
+
+:root {
+    --lightorange: #f9c48b;
+    --middleorange: #f69051;
+    --red: #f26d40;
+    --black: #260803;
+    --lightpink: #fdefec
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+    color: var(--black);
+    background-color: var(--lightorange);
+}
+
+img {
+    width: 100%;
+}
+
+/*////////////////////////
+    2. Typography
+////////////////////////*/
+h2 {
+    margin: 0 0 .5rem 0;
+}
+
+p {
+    margin: .75rem 0;
+}
+
+
+/*////////////////////////
+    3. Layout
+////////////////////////*/
+section {
+    background-color: var(--lightpink);
+    box-shadow: 0 .0625rem .25rem rgba(0, 0, 0, 0.16);
+    padding: 2rem;
+    margin: 1.5rem;
+    border-radius: .5rem;
+}
+
+/*////////////////////////
+    4. areas
+////////////////////////*/
+
+/*////////////////////////
+    5. Media Queries
+////////////////////////*/
+@media screen and (min-width: 768px) {
+    /* voor tablets */
+    html {
+        font-size: 18px;
+    }
+
+    body {
+        background-color: var(--middleorange);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* voor desktops en groter */
+    html {
+        font-size: 20px;
+    }
+
+    body {
+        background-color: var(--red);
+    }
+}
