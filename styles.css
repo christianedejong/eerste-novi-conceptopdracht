@@ -14,6 +14,9 @@ Table of Contents:
         4.3 Main
         4.4 project-artikel
         4.5 service-section
+        4.6 contact-section
+        4.7 footer-section
+
     5. Media Queries
 ////////////////////////////////////////////////////////////////////////*/
 
@@ -48,119 +51,174 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h4 {
+h1, h2, h3 {
     font-family: 'Merriweather', serif;
 }
 
-h1 {
-    color: white;
-    font-size: 36px;
-    width: 700px;
-}
-
-h2 {
-    color: var(--Paars);
-    font-size: 25px;
-    width: 700px;
-}
-
-h4 {
-    color: var(--Paars);
-    font-size: 20px;
-}
-
-.titel-artikel {
-    color: var(--Zwart)
-}
-
-.tekst-artikel {
-    font-size: 16px;
-}
-
-.view-project {
-    font-size: 12px;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/*h1 {*/
+/*    color: white;*/
+/*    font-size: 36px;*/
+/**/
+/*}*/
+/**/
+/*h2, h4 {*/
+/*    color: var(--Paars);*/
+/**/
+/*}*/
+/**/
+/**/
+/*.view-project {*/
+/*    font-size: 12px;*/
+/*    text-decoration: none;*/
+/*    text-transform: uppercase;*/
+/*    letter-spacing: 1px;*/
 }
 
 
 /*////////////////////////
     3. Layout
 ////////////////////////*/
+/*--------------3.1 Reusables----------------------*/
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-container {
+    /*---mag ook 1400px--*/
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*----boven en onder geen marge, links en rechts wel----*/
+    margin: 0 50px;
+}
+
+/*-----------------3.2 Other---------------------------*/
+
+/*.button {*/
+/*    border-radius: 30px;*/
+/*    border: none;*/
+/*    background-color:var(--Roze);*/
+/*    color: white;*/
+/*    font-size: 12px;*/
+/*    padding: 19px;*/
+/*    width: 210px;*/
+/*    box-shadow: 0px 4px 6px 3px rgba(0,0,0,0.19);*/
 
 /*////////////////////////
     4. areas
 ////////////////////////*/
 
-/*--------4.1 Header-navigatie-----------------*/
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.menu li {
-    display: inline-block;
-    margin-left: 0px;
-    padding-top: 20px;
-    padding-right: 30px;
-    font-size: 16px;
-}
-.menu li:first-child {
-    margin-left: 0;
-}
-
-.menu li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-.menu li a:hover {
-    background-color: #555;
-    border-radius: 4px;
-}
+/*---------------4.1 Header-navigatie-----------------*/
+/*.navbar {*/
+/*    display: flex;*/
+/*    justify-content: flex-end;*/
+/*}*/
+/**/
+/*.menu {*/
+/*    list-style-type: none;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+/*.menu li {*/
+/*    display: inline-block;*/
+/*    margin-left: 0px;*/
+/*    padding-top: 20px;*/
+/*    padding-right: 30px;*/
+/*    font-size: 16px;*/
+/*}*/
+/*.menu li:first-child {*/
+/*    margin-left: 0;*/
+/*}*/
+/**/
+/*.menu li a {*/
+/*    color: #fff;*/
+/*    text-decoration: none;*/
+/*    padding: 5px 10px;*/
+/*}*/
+/**/
+/*.menu li a:hover {*/
+/*    background-color: #555;*/
+/*    border-radius: 4px;*/
+/*}*/
 
 /*--------------4.2 Header------------*/
 
-header {
-    position: relative;
+.header-section {
     background: linear-gradient(to right, var(--Blauw), var(--Paars));
+    color: white;
+    position: relative;
     overflow: hidden;
-    margin: 0;
 }
 
-.header-container {
+/*------------------*/
+
+.header-navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 30px 0;
+}
+
+.header-navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 400px;
+}
+
+.header-navigation a {
+   color: white;
+    text-decoration: none;
+}
+
+/*------------------*/
+
+.header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 50px 0;
+    padding-bottom: 100px
+}
+
+.header-content h1 {
     text-align: center;
-    margin-top: 80px;
-    margin-bottom: 125px;
-    padding-bottom: 80px;
+    max-width: 675px;
+    font-size: 37px;
+}
+
+.header-icoontjes-bottom {
+    position: absolute;
+    /* Pas deze waarde aan om de afbeelding precies op de rand te plaatsen */
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 65px;
 }
 
 .p-header {
-    color: white;
-    margin-top: 25px;
-    margin-bottom: 30px;
+    font-size: 22px;
+    margin-top: 21px;
     letter-spacing: 1px;
 }
 
 .input-button-header {
     border-radius: 30px;
     border: none;
-    background-color:var(--Roze);
+    background-color: var(--Roze);
     color: white;
     font-size: 12px;
-    padding: 19px;
+    margin: 28px 0;
+    padding: 18px;
     width: 210px;
-    box-shadow: 0px 4px 6px 3px rgba(0,0,0,0.19);
+    box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.19);
+}
 }
 
 .header-icoontjes-container {
@@ -171,173 +229,184 @@ header {
 
 .img-header {
     position: absolute;
-    bottom: -25px; /* Pas deze waarde aan om de afbeelding precies op de rand te plaatsen */
+    bottom: -3px;
     left: 50%;
     transform: translateX(-50%);
     width: 65px;
 }
 
-/*-----------------4.3 Main--------------------------*/
 
-.main-container {
+
+/*-----------------4.3 Main--------------------------*/
+.main-section {
+    background-color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+}
+
+.main-wrapper {
+    padding: 83px 0;
+}
+
+.main-wrapper h2 {
+    color: var(--Paars);
     text-align: center;
-    height: 300px;
-    margin-top: 90px;
-    margin-bottom: 85px;
+    max-width: 675px;
+    font-size: 26px;
+    padding: 12px 0;
 }
 
 .question-link {
-    margin-top: 85px;
+    margin-top: 80px;
     font-size: 16px;
 }
 
 /*------------------4.4 project-artikel--------------------------------*/
-/* De buitenste container is altijd de volledige schermbreedte. Het is een flexbox container die zijn inhoud altijd netjes horizontaal centreert */
-.outer-content-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.project-section {
+    background-color: var(--Lichtgrijs);
+    padding-top: 80px;
+    padding-bottom: 50px;
 }
 
-/*De binnenste container is maximaal 1400px breed, zodat het er ook goed uitziet op brede schermen.
-Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer ruimte is.*/
-.inner-content-container {
-    flex-basis: 1400px;
-    flex-shrink: 1;
-    flex-grow: 0;
-    /*We voegen margin toe aan de linker- en rechterkant, zodat de content nooit helemaal tegen de rand gedrukt kan worden*/
-    margin: 0 20px;
-    /*We zorgen er ook voor dat deze flex-item op haar beurt ook weer een flexbox container is, waarin alle children onder elkaar komen te staan*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#work {
-    background-color: #F3F6F9;
-}
-
-.work-article {
+.project-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 100px 0;
 }
 
-/*Draai de volgorde van de afbeelding en tekst om bij de 1e, 3e, etc.*/
-.work-article:nth-of-type(odd) {
+.reverse {
+    display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.work-article__image-wrapper {
-    /*De afbeelding-wrapper moet in de basis 800px breed zijn...*/
-    flex-basis: 800px;
-    /*Als er meer ruimte is, mag hij NIET groter worden*/
-    flex-grow: 0;
-    /*Als er minder ruimte is, krimpt hij 1 fractie (dus alles) van de ingeleverde ruimte*/
-    flex-shrink: 1;
+.text-container {
+    max-width: 300px;
+    margin: 35px;
 }
 
-.work-article__image-wrapper img {
-    /*Om afbeeldingen goed mee te laten schalen met de wrapper, zet je de afbeelding zelf altijd op 100% breedte.
-    Zo past de afbeelding zich telkens aan, aan zijn omgeving*/
+.image-container {
+    flex-basis: 650px;
+    margin-bottom: 80px;
+}
+
+.image-container img {
     width: 100%;
-    box-shadow: 0 32px 28px -10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0px 20px 20px -4px rgba(0, 0, 0, 0.19);
 }
 
-.work-article__info-container {
-    /*De content moet in de basis 480 breed zijn*/
-    flex-basis: 480px;
-    /*Als er meer ruimte is, mag hij NIET groter worden*/
-    flex-grow: 0;
-    /*Als er minder ruimte is, mag hij NIET kleiner worden*/
-    flex-shrink: 0;
-    padding: 0 50px 50px 50px;
+.titel-artikel {
+    margin-bottom: 14px;
 }
 
-.work-article__title-squiggle {
-    margin-top: 24px;
-    width: 57px;
-    height: 6px;
-    background-image: url(./assets/squiggle_line.svg);
+.tekst-artikel {
+    margin-bottom: 35px;
+    margin-top: 33px;
 }
 
-.work-article__info-container p {
-    font-weight: 400;
-    margin: 50px 0;
-}
-
-.work-article__project-link {
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
 
 /*--------------4.5 service-section---------------------------*/
 
-section {
-    display: flex;
-    flex-direction:row ;
-    justify-content: center;
-    flex-wrap: wrap;
+.service-section {
     background-color: white;
-    padding-top: 60px;
-    padding-bottom: 83px;
-    padding-left: 100px;
-    padding-right: 100px;
-
 }
 
-.service-container {
-    width: 325px;
-    height: 290px;
+.service-article img {
+    width: 65px;
+    margin: 8px 0;
+}
+
+.service-article {
+    text-align: left;
+    flex-basis: 325px;
     border: 1px solid var(--Paars);
-    margin: 17px;
-    box-shadow: 0px 9px 10px 0px rgba(0,0,0,0.08);
+    padding: 23px 30px;
+    box-shadow: 0px 9px 10px 0px rgba(0,0,0,0.08)
 }
 
-.items-container {
-    margin-top: 29px;
-    margin-bottom: 40px;
-    margin-left: 30px;
-    margin-right: 30px;
-
-
+.inner-container__service-grid {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 32px;
+    column-gap: 32px;
+    margin: 0 20px;
+    padding: 90px 90px;
 }
-.items-container p{
-    display: block;
-    font-size: 14px;
+
+.service-article h3 {
+    color: var(--Paars);
+}
+
+.service-article p {
+    font-size: 13px;
     color: var(--Grijs);
-    margin-top: 22px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+    /*flex-wrap: wrap;*/
+    /*background-color: white;*/
+    /*padding-top: 60px;*/
+    /*padding-bottom: 83px;*/
+    /*padding-left: 100px;*/
+    /*padding-right: 100px;*/
+
+
+
+
+
+/*.service-container {*/
+/*    width: 325px;*/
+/*    height: 290px;*/
+/*    border: 1px solid var(--Paars);*/
+/*    margin: 17px;*/
+/*    box-shadow: 0px 9px 10px 0px rgba(0,0,0,0.08);*/
+/*}*/
+/**/
+/*.items-container {*/
+/*    margin-top: 29px;*/
+/*    margin-bottom: 40px;*/
+/*    margin-left: 30px;*/
+/*    margin-right: 30px;*/
+/**/
+/**/
+/*}*/
+/*.items-container p{*/
+/*    display: block;*/
+/*    font-size: 14px;*/
+/*    color: var(--Grijs);*/
+/*    margin-top: 22px;*/
+/*}*/
+/**/
+/*.service-icoon {*/
+/*    width: 60px;*/
+/*    margin-bottom: 4px;*/
+/*}*/
+
+/*----------------contact-section------------------*/
+
+.contact-section {
+    background: var(--Paars);
+    color: white;
 }
 
-.service-icoon {
-    width: 60px;
-    margin-bottom: 4px;
+/*-----------------footer-section--------------------*/
+.footer-section {
+    background-color: var(--Zwart);
+    color: white;
+    padding: 20px;
+    font-size: 12px;
 }
+
 
 /*////////////////////////
     5. Media Queries
 ////////////////////////*/
 
-@media screen and (min-width: 768px) {
-    /* voor tablets */
-    html {
-        font-size: 18px;
-    }
-}
-
-
-@media screen and (min-width: 1200px) {
-    /* voor desktops en groter */
-    html {
-        font-size: 20px;
-    }
-}
 
