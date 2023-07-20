@@ -47,6 +47,7 @@ Table of Contents:
 /*////////////////////////
     2. Typography
 ////////////////////////*/
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -55,30 +56,11 @@ h1, h2, h3 {
     font-family: 'Merriweather', serif;
 }
 
-/*h1 {*/
-/*    color: white;*/
-/*    font-size: 36px;*/
-/**/
-/*}*/
-/**/
-/*h2, h4 {*/
-/*    color: var(--Paars);*/
-/**/
-/*}*/
-/**/
-/**/
-/*.view-project {*/
-/*    font-size: 12px;*/
-/*    text-decoration: none;*/
-/*    text-transform: uppercase;*/
-/*    letter-spacing: 1px;*/
-}
-
-
 /*////////////////////////
     3. Layout
 ////////////////////////*/
 /*--------------3.1 Reusables----------------------*/
+
 .outer-container {
     display: flex;
     flex-direction: row;
@@ -107,44 +89,13 @@ h1, h2, h3 {
 /*    width: 210px;*/
 /*    box-shadow: 0px 4px 6px 3px rgba(0,0,0,0.19);*/
 
+
 /*////////////////////////
     4. areas
 ////////////////////////*/
 
 /*---------------4.1 Header-navigatie-----------------*/
-/*.navbar {*/
-/*    display: flex;*/
-/*    justify-content: flex-end;*/
-/*}*/
-/**/
-/*.menu {*/
-/*    list-style-type: none;*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*}*/
-/*.menu li {*/
-/*    display: inline-block;*/
-/*    margin-left: 0px;*/
-/*    padding-top: 20px;*/
-/*    padding-right: 30px;*/
-/*    font-size: 16px;*/
-/*}*/
-/*.menu li:first-child {*/
-/*    margin-left: 0;*/
-/*}*/
-/**/
-/*.menu li a {*/
-/*    color: #fff;*/
-/*    text-decoration: none;*/
-/*    padding: 5px 10px;*/
-/*}*/
-/**/
-/*.menu li a:hover {*/
-/*    background-color: #555;*/
-/*    border-radius: 4px;*/
-/*}*/
 
-/*--------------4.2 Header------------*/
 
 .header-section {
     background: linear-gradient(to right, var(--Blauw), var(--Paars));
@@ -177,7 +128,7 @@ h1, h2, h3 {
     text-decoration: none;
 }
 
-/*------------------*/
+/*--------------4.2 Header------------*/
 
 .header-content {
     display: flex;
@@ -218,8 +169,10 @@ h1, h2, h3 {
     padding: 18px;
     width: 210px;
     box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
-}
+
+
 
 .header-icoontjes-container {
     display: flex;
@@ -238,6 +191,7 @@ h1, h2, h3 {
 
 
 /*-----------------4.3 Main--------------------------*/
+
 .main-section {
     background-color: white;
     display: flex;
@@ -264,6 +218,7 @@ h1, h2, h3 {
 }
 
 /*------------------4.4 project-artikel--------------------------------*/
+
 .project-section {
     background-color: var(--Lichtgrijs);
     padding-top: 80px;
@@ -290,6 +245,14 @@ h1, h2, h3 {
     margin: 35px;
 }
 
+.text-container h2 {
+    font-size: 26px;
+}
+
+.text-container img {
+    max-width: 45px;
+}
+
 .image-container {
     flex-basis: 650px;
     margin-bottom: 80px;
@@ -307,6 +270,12 @@ h1, h2, h3 {
 .tekst-artikel {
     margin-bottom: 35px;
     margin-top: 33px;
+}
+
+.view-project {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
 }
 
 
@@ -338,7 +307,7 @@ h1, h2, h3 {
     row-gap: 32px;
     column-gap: 32px;
     margin: 0 20px;
-    padding: 90px 90px;
+    padding: 90px 0;
 }
 
 .service-article h3 {
@@ -351,44 +320,7 @@ h1, h2, h3 {
     padding-top: 20px;
     padding-bottom: 15px;
 }
-    /*flex-wrap: wrap;*/
-    /*background-color: white;*/
-    /*padding-top: 60px;*/
-    /*padding-bottom: 83px;*/
-    /*padding-left: 100px;*/
-    /*padding-right: 100px;*/
 
-
-
-
-
-/*.service-container {*/
-/*    width: 325px;*/
-/*    height: 290px;*/
-/*    border: 1px solid var(--Paars);*/
-/*    margin: 17px;*/
-/*    box-shadow: 0px 9px 10px 0px rgba(0,0,0,0.08);*/
-/*}*/
-/**/
-/*.items-container {*/
-/*    margin-top: 29px;*/
-/*    margin-bottom: 40px;*/
-/*    margin-left: 30px;*/
-/*    margin-right: 30px;*/
-/**/
-/**/
-/*}*/
-/*.items-container p{*/
-/*    display: block;*/
-/*    font-size: 14px;*/
-/*    color: var(--Grijs);*/
-/*    margin-top: 22px;*/
-/*}*/
-/**/
-/*.service-icoon {*/
-/*    width: 60px;*/
-/*    margin-bottom: 4px;*/
-/*}*/
 
 /*----------------contact-section------------------*/
 
@@ -398,6 +330,7 @@ h1, h2, h3 {
 }
 
 /*-----------------footer-section--------------------*/
+
 .footer-section {
     background-color: var(--Zwart);
     color: white;
