@@ -74,7 +74,7 @@ h1, h2, h3 {
     flex-direction: column;
     align-items: center;
     /*----boven en onder geen marge, links en rechts wel----*/
-    margin: 0 50px;
+    margin: 0 35px;
 }
 
 /*-----------------3.2 Other---------------------------*/
@@ -120,7 +120,7 @@ h1, h2, h3 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-basis: 400px;
+    flex-basis: 340px;
 }
 
 .header-navigation a {
@@ -228,7 +228,7 @@ h1, h2, h3 {
 .project-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     justify-content: space-between;
     align-items: center;
 }
@@ -242,7 +242,9 @@ h1, h2, h3 {
 
 .text-container {
     max-width: 300px;
-    margin: 35px;
+    min-width: 300px;
+    margin: 0 35px;
+    margin-bottom: 60px;
 }
 
 .text-container h2 {
