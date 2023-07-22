@@ -48,7 +48,7 @@ Table of Contents:
     2. Typography
 ////////////////////////*/
 
-body {
+body, textarea, input{
     font-family: 'Roboto', sans-serif;
 }
 
@@ -327,8 +327,74 @@ h1, h2, h3 {
 /*----------------contact-section------------------*/
 
 .contact-section {
-    background: var(--Paars);
+    background: linear-gradient(to right, var(--Blauw), var(--Paars));
     color: white;
+    padding: 55px 0;
+}
+
+.form-titel {
+    font-size: 37px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.question {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-content__form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    max-width: 685px;
+    margin-left: 30px;
+}
+
+.contact-content__form input,
+.contact-content__form textarea {
+    background-color: #ffffff;
+    border: 1px solid #7A7A7A;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    padding: 17px;
+    display: block;
+    font-size: 14px;
+    color: #7A7A7A;
+    width: 100%;
+}
+
+.contact-content__form input::placeholder,
+.contact-content__form textarea::placeholder {
+    color: #7A7A7A;
+}
+
+.name-space,
+.email-space,
+.message-space {
+    margin: 3px 0;
+}
+
+.contact-content__form label {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 0;
+}
+
+.contact-content__form button{
+    align-self: center;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--Roze);
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    padding: 18px;
+    width: 155px;
+    box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
 
 /*-----------------footer-section--------------------*/
@@ -336,7 +402,7 @@ h1, h2, h3 {
 .footer-section {
     background-color: var(--Zwart);
     color: white;
-    padding: 20px;
+    padding: 22px;
     font-size: 12px;
 }
 
