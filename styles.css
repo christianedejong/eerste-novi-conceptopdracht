@@ -228,7 +228,6 @@ h1, h2, h3 {
 .project-container {
     display: flex;
     flex-direction: row;
-    /*flex-wrap: wrap;*/
     justify-content: space-between;
     align-items: center;
 }
@@ -349,7 +348,6 @@ h1, h2, h3 {
     text-align: left;
     width: 100%;
     max-width: 685px;
-    margin-left: 30px;
 }
 
 .contact-content__form input,
@@ -410,5 +408,29 @@ h1, h2, h3 {
 /*////////////////////////
     5. Media Queries
 ////////////////////////*/
+@media screen and (max-width: 576px) {
 
+    .header-content h1 {
+        font-size: 35px;
+    }
 
+    .header-navigation {
+        justify-content: center;
+
+    }
+
+    .main-wrapper h2 {
+        font-size: 22px;
+    }
+
+    .project-container {
+        flex-wrap: wrap;
+    }
+    .form-titel {
+        font-size: 35px;
+    }
+
+    .reverse {
+         flex-direction: row;
+    }
+}
