@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+
+
+/*////////////////////////////////////////////////////////////////////////
+Table of Contents:
+    1. Global Styles
+    2. Typografie
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header-navigatie
+        4.2 Header
+        4.3 Main
+        4.4 project-artikel
+        4.5 service-section
+        4.6 contact-section
+        4.7 footer-section
+
+    5. Media Queries
+////////////////////////////////////////////////////////////////////////*/
+
+
+/*////////////////////////
+    1. Global Styles
+////////////////////////*/
+
+:root {
+    --Paars: #5722CD;
+    --Blauw: #4845E4;
+    --Roze: #ED4385;
+    --Zwart: #0C0C0C;
+    --Lichtpaars: #F2F0FF;
+    /*(voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:*/
+    --Lichtgrijs: #F3F6F9;
+    /*voor de ACHTERGROND*/
+    --Grijs: #7A7A7A;
+    /*voor de servicetegel tekst*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*////////////////////////
+    2. Typography
+////////////////////////*/
+
+body, textarea, input{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+/*////////////////////////
+    3. Layout
+////////////////////////*/
+/*--------------3.1 Reusables----------------------*/
+
+.outer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-container {
+    flex-basis: 1400px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*----boven en onder geen marge, links en rechts wel----*/
+    margin: 0 20px;
+}
+
+.tekst-begrenzer {
+    max-width: 850px;
+    text-align: center;
+}
+
+.area-padding {
+    padding: 100px 0;
+}
+
+/*-----------------3.2 Other---------------------------*/
+
+/*.button {*/
+/*    border-radius: 30px;*/
+/*    border: none;*/
+/*    background-color:var(--Roze);*/
+/*    color: white;*/
+/*    font-size: 12px;*/
+/*    padding: 19px;*/
+/*    width: 210px;*/
+/*    box-shadow: 0px 4px 6px 3px rgba(0,0,0,0.19);*/
+
+
+/*////////////////////////
+    4. areas
+////////////////////////*/
+
+/*---------------4.1 Header-navigatie-----------------*/
+
+
+.header-section {
+    background: linear-gradient(to right, var(--Blauw), var(--Paars));
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/*------------------*/
+
+.header-navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 30px 0;
+}
+
+.header-navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 340px;
+}
+
+.header-navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+/*--------------4.2 Header------------*/
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    padding-bottom: 100px
+}
+
+.header-content h1 {
+    text-align: center;
+    max-width: 850px;
+    font-size: 46px;
+    padding: 16px 0;
+}
+
+.header-icoontjes-bottom {
+    position: absolute;
+    /* Pas deze waarde aan om de afbeelding precies op de rand te plaatsen */
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65px;
+}
+
+.p-header {
+    font-size: 22px;
+    margin-top: 21px;
+    letter-spacing: 1px;
+}
+
+.input-button-header {
+    border-radius: 30px;
+    border: none;
+    background-color: var(--Roze);
+    color: white;
+    font-size: 11px;
+    margin: 26px 0;
+    padding: 16px;
+    width: 200px;
+    box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+
+
+
+.header-icoontjes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-header {
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65px;
+}
+
+
+
+/*-----------------4.3 Main--------------------------*/
+
+.main-section {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-wrapper {
+    padding: 83px 0;
+}
+
+.main-wrapper h2 {
+    color: var(--Paars);
+    text-align: center;
+    max-width: 675px;
+    font-size: 26px;
+    padding: 12px 0;
+}
+
+.question-link {
+    margin-top: 80px;
+    font-size: 16px;
+}
+
+/*------------------4.4 project-artikel--------------------------------*/
+
+.project-section {
+    background-color: var(--Lichtgrijs);
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-container {
+    max-width: 300px;
+    min-width: 300px;
+    margin: 0 35px;
+    margin-bottom: 60px;
+}
+
+.text-container h2 {
+    font-size: 26px;
+}
+
+.text-container img {
+    max-width: 45px;
+}
+
+.image-container {
+    flex-basis: 650px;
+    margin-bottom: 80px;
+}
+
+.image-container img {
+    width: 100%;
+    box-shadow: 0px 20px 20px -4px rgba(0, 0, 0, 0.19);
+}
+
+.titel-artikel {
+    margin-bottom: 14px;
+}
+
+.tekst-artikel {
+    margin-bottom: 35px;
+    margin-top: 33px;
+}
+
+.view-project {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+
+/*--------------4.5 service-section---------------------------*/
+
+.service-section {
+    background-color: white;
+}
+
+.service-article img {
+    width: 65px;
+    margin: 8px 0;
+}
+
+.service-article {
+    text-align: left;
+    flex-basis: 325px;
+    border: 1px solid var(--Paars);
+    padding: 23px 30px;
+    box-shadow: 0px 9px 10px 0px rgba(0,0,0,0.08)
+}
+
+.inner-container__service-grid {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 32px;
+    column-gap: 32px;
+    margin: 0 20px;
+    padding: 90px 0;
+}
+
+.service-article h3 {
+    color: var(--Paars);
+}
+
+.service-article p {
+    font-size: 13px;
+    color: var(--Grijs);
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+
+/*----------------contact-section------------------*/
+
+.contact-section {
+    background: linear-gradient(to right, var(--Blauw), var(--Paars));
+    color: white;
+    padding: 55px 0;
+}
+
+.form-titel {
+    font-size: 37px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.question {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-content__form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    max-width: 685px;
+}
+
+.contact-content__form input,
+.contact-content__form textarea {
+    background-color: #ffffff;
+    border: 1px solid #7A7A7A;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    padding: 17px;
+    display: block;
+    font-size: 14px;
+    color: #7A7A7A;
+    width: 100%;
+}
+
+.contact-content__form input::placeholder,
+.contact-content__form textarea::placeholder {
+    color: #7A7A7A;
+}
+
+.name-space,
+.email-space,
+.message-space {
+    margin: 3px 0;
+}
+
+.contact-content__form label {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 0;
+}
+
+.contact-content__form button{
+    align-self: center;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--Roze);
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    padding: 18px;
+    width: 155px;
+    box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+/*-----------------footer-section--------------------*/
+
+.footer-section {
+    background-color: var(--Zwart);
+    color: white;
+    padding: 22px;
+    font-size: 12px;
+}
+
+
+/*////////////////////////
+    5. Media Queries
+////////////////////////*/
+@media screen and (max-width: 576px) {
+
+    .header-content h1 {
+        font-size: 35px;
+    }
+
+    .header-navigation {
+        justify-content: center;
+
+    }
+
+    .main-wrapper h2 {
+        font-size: 22px;
+    }
+
+    .project-container {
+        flex-wrap: wrap;
+    }
+    .form-titel {
+        font-size: 32px;
+    }
+
+    .reverse {
+        flex-direction: row;
+    }
+}
