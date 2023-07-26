@@ -397,7 +397,7 @@ h1, h2, h3 {
     padding: 14px 0;
 }
 
-.contact-content__form button{
+.submit {
     align-self: center;
     border-radius: 30px;
     border: none;
@@ -406,21 +406,20 @@ h1, h2, h3 {
     font-size: 12px;
     margin-top: 20px;
     margin-bottom: 2px;
-    padding: 18px;
-    width: 155px;
+    padding: 18px 280px;
     box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.19);
     cursor: pointer;
 }
 
 /*-----------------footer-section--------------------*/
 
-.footer-section {
-    background-color: var(--Zwart);
+#footer {
+    background-color: black;
     color: white;
-    padding: 22px;
-    font-size: 12px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
 }
-
 
 /*////////////////////////
     5. Media Queries
