@@ -380,10 +380,6 @@ h1, h2, h3 {
     width: 100%;
 }
 
-.contact-content__form input::placeholder,
-.contact-content__form textarea::placeholder {
-    color: #7A7A7A;
-}
 
 .name-space,
 .email-space,
