@@ -263,6 +263,10 @@ h1, h2, h3 {
     font-size: 26px;
 }
 
+.text-container p {
+    font-weight: 700;
+}
+
 .text-container img {
     max-width: 45px;
 }
